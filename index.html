@@ -34,6 +34,7 @@
 		border: 4px solid red;
 		/* Make the mouse a hand when the user is over pic */
 		cursor: pointer;
+		/* Grow thumbnails on hover */
 		width: 16%;
 	}
 
@@ -55,11 +56,12 @@
 		</div>
 		<!-- Make the middle layer div to put our thumbnails in -->
 		<div id="middle">
-			<img src="images/image1.jpg" onmouseover="largePreview.src='images/image1.jpg'">
-			<img src="images/image2.jpg" onmouseover="largePreview.src='images/image2.jpg'">
-			<img src="images/image3.jpg" onmouseover="largePreview.src='images/image3.jpg'">
-			<img src="images/image4.jpg" onmouseover="largePreview.src='images/image4.jpg'">
-			<img src="images/image5.jpg" onmouseover="largePreview.src='images/image5.jpg'">
+			<!-- Uses JS to swap pictures -->
+			<img src="images/image1.jpg" onmouseover="largePreview.src=this.src">
+			<img src="images/image2.jpg" onmouseover="largePreview.src=this.src">
+			<img src="images/image3.jpg" onmouseover="largePreview.src=this.src">
+			<img src="images/image4.jpg" onmouseover="largePreview.src=this.src">
+			<img src="images/image5.jpg" onmouseover="largePreview.src=this.src">
 		</div>
 		<!-- Make the bottom div for our large preview -->
 		<div id="bottom">
@@ -68,15 +70,6 @@
 		</div>
 
 	</div>
-	<!-- Attempt to create Javascript function to swap images instead -->
 	
-	<!-- <script type="text/javascript">
-
-		var changeMe;
-
-		function changeMe(eID, elm) {
-			document.getElementById(eID).src = elm.src;
-		}
-	</script> -->
 </body>
 </html>

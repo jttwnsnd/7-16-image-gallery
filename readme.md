@@ -1,6 +1,7 @@
 #Image Gallery in VSS and HTML
 ##Features
 ###Thumbnails grow when hover
+###Uses JS to swap pictures
 
 ##To Do
-###Complete Javascript function to swap images
+###Add jQuery for effects

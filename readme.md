@@ -1,2 +1,6 @@
 #Image Gallery in VSS and HTML
-##Images from space telescope change on hover
+##Features
+###Thumbnails grow when hover
+
+##To Do
+###Complete Javascript function to swap images

@@ -16,6 +16,11 @@
 
 	}
 
+	#middle {
+		/* Add buffer for thumbnails to ease seeing title and large picture */
+		margin: 5px;
+	}
+
 	#middle img {
 		/* Force the width of the thumbnail images */
 		width: 15%;
@@ -29,6 +34,7 @@
 		border: 4px solid red;
 		/* Make the mouse a hand when the user is over pic */
 		cursor: pointer;
+		width: 16%;
 	}
 
 	#bottom img {
@@ -58,10 +64,19 @@
 		<!-- Make the bottom div for our large preview -->
 		<div id="bottom">
 			<!-- Make the large preview image -->
-			<img src="images/image1.jpg" name="largePreview">
+			<img id = "display" src="images/image1.jpg" name="largePreview">
 		</div>
 
 	</div>
+	<!-- Attempt to create Javascript function to swap images instead -->
+	
+	<!-- <script type="text/javascript">
 
+		var changeMe;
+
+		function changeMe(eID, elm) {
+			document.getElementById(eID).src = elm.src;
+		}
+	</script> -->
 </body>
 </html>

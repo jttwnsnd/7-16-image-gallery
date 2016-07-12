@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Unit 1:Day 1 Image Gallery</title>
+	<style type="text/css" media="screen">
+
+	body {
+		margin: 0px;
+	}
+		
+	#gallery {
+		/* Set the background to black */
+		background-color: black;
+		/* Set the text color to white */
+		color: white;
+		/* Align everything to the center */
+		text-align: center;
+		/* Force the page to be at least 100% tall */
+		min-height: 100vh;
+		/* i need overflow hidden so my children will be forced to tell me how tall. float will also work, but i dont want to float */
+		overflow: hidden;
+		/* float: left; */
+
+	}
+
+	img {
+		/* Picture is told to be as big as its parent allows */
+		max-width: 100%;
+	}
+
+	#top {
+		/* My children (thumbnail) are floating. I need to tknow how tall they are. OVERFLOW! */
+		overflow: hidden;
+		/* Make me 75% so i dont take up the whole screen */
+		width: 75%;
+		/* set my margin to auto so the margin left over fom my width (25%) is divided evenly on all sides. */
+		margin: auto;
+	}
+
+	#bottom {
+	
+	}
+	.thumbnail {
+		width: 20%;
+		position: absolute;
+		box-sizing: border-box;
+	}
+
+	.one {
+		border: 8px solid red;
+		top: 0px;
+		left: 0px;
+	}
+
+	.two {
+		top: 0px;
+		left: 20%;
+	}
+
+	.three {
+		top: 0px;
+		left: 40%;
+	}
+
+	.four {
+		top: 0px;
+		left: 60%;
+	}
+
+	.five {
+		top: 0px;
+		left: 80%;
+	}
+
+	</style>
+</head>
+<body>
+	<!-- Create a master wrapper for the whole gallery to live inside of -->
+	<div id="gallery"> 
+		<!-- Make the top layer div for the title -->
+		<div id="head">
+			<!-- Put our title inside an h2 tag -->
+			<h2>Image Gallery in HTML and CSS</h2>
+		</div>
+		<!-- Make the left hand div for our thumbnails to live in -->
+		<div id="top">
+			<!-- add a div to hold an image. divs are nice because they are blocks. images are not, they are inline.
+			add the same class (thumbnail) to each div, to target all at same time.
+			add a unique class to target a div separately -->
+			<div class="thumbnail one">
+				<img src="images/image1.jpg" onmouseover="largePreview.src='images/image1.jpg'">
+			</div>
+			<div class="thumbnail two">
+				<img src="images/image2.jpg" onmouseover="largePreview.src='images/image2.jpg'">
+			</div>
+			<div class="thumbnail three">
+				<img src="images/image3.jpg" onmouseover="largePreview.src='images/image3.jpg'">
+			</div>
+			<div class="thumbnail four">
+				<img src="images/image4.jpg" onmouseover="largePreview.src='images/image4.jpg'">
+			</div>
+			<div class="thumbnail five">
+				<img src="images/image5.jpg" onmouseover="largePreview.src='images/image5.jpg'">
+			</div>
+		</div>
+		<!-- Make the right div for our large preview -->
+		<div id="bottom">
+			<!-- Make the large preview image -->
+			<img src="images/image1.jpg" name="largePreview">
+		</div>
+
+	</div>
+
+</body>
+</html>
